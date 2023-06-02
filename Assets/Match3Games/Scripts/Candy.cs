@@ -49,7 +49,6 @@ public class Candy : MonoBehaviour
     // Bu, her frame'de çaðrýlýr.
     void Update()
     {
-        Debug.Log(column);
         // Eþleþmeleri kontrol et
         FindMatches();
 
