@@ -5,26 +5,20 @@ public class Candy : MonoBehaviour
 {
 
     [Header("Board Variables")]
-    public int column; // Þekerin sütun konumu
-    public int row; // Þekerin satýr konumu
-    public int previousColumn; // Þekerin önceki sütun konumu
-    public int previousRow; // Þekerin önceki satýr konumu
-    public int targetX; // Þekerin hedef X konumu
-    public int targetY; // Þekerin hedef Y konumu
-    public bool isMatched = false; // Þekerin eþleþip eþleþmediðini kontrol eden boolean
+    public int column;
+    public int row;
+    public int previousColumn; 
+    public int previousRow; 
+    public int targetX; 
+    public int targetY; 
+    public bool isMatched = false; 
 
-    // Oyun tahtasýný temsil eden bir referans
     private Board board;
-    // Hareket sýrasýnda etkilenecek diðer þeker
     private GameObject otherCandy;
-    // Geçici pozisyonlarý depolamak için kullanýlan Vector2
     private Vector2 tempPos;
-    // Dokunma/Klik olaylarýný takip etmek için kullanýlan Vector2
     private Vector2 firstTouchPos;
     private Vector2 finalTouchPos;
-    // Kaydýrma açýsýný belirleyen float
     public float swipeAngle = 0f;
-    // Kaydýrmanýn direncini belirleyen float
     public float swipeResist = 1f;
 
     // Bu, oyun baþladýðýnda çaðrýlýr.
@@ -33,15 +27,12 @@ public class Candy : MonoBehaviour
         // Oyun tahtasýný bul
         board = FindObjectOfType<Board>();
 
-        // Þekerin hedef X ve Y konumlarýný, þu anki transform konumuna eþitle
         //targetX = (int)transform.position.x;
         //targetY = (int)transform.position.y;
 
-        // Þekerin satýr ve sütununu, hedef X ve Y konumlarýna eþitle
         //row = targetY;
         //column = targetX;
 
-        // Þekerin önceki satýr ve sütununu, þu anki satýr ve sütuna eþitle
         //previousRow = row;
         //previousColumn = column;
     }
